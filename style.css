@@ -928,6 +928,31 @@ section {
   font-weight: 600;
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-link:hover .project-box {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 25px rgba(150,100,40,0.3);
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.project-link:hover .github-link {
+    color: #00acee;
+}
+
 /* Responsive Design for Services */
 @media (max-width: 1024px) {
   .services-grid {
@@ -1138,6 +1163,29 @@ section {
   border: 2px solid rgb(150,100,40);
   box-shadow: 0 0 20px rgba(150,100,40,0.6);
   transform: scale(1.05);
+}
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
 }
 
 /* Responsive */
